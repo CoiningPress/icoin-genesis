@@ -11,7 +11,6 @@ class TransactionView;
 class OverviewPage;
 class MiningPage;
 class AddressBookPage;
-class ChatBox;
 class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class Notificator;
@@ -68,7 +67,6 @@ private:
     AddressBookPage *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
-    ChatBox *chatBox;
 
     QLabel *labelEncryptionIcon;
     QLabel *labelMiningIcon;
@@ -97,7 +95,7 @@ private:
     QAction *changePassphraseAction;
     QAction *aboutQtAction;
     QAction *openRPCConsoleAction;
-    QAction *billionCoin;
+    QAction *iCoin;
 
     QSystemTrayIcon *trayIcon;
     Notificator *notificator;

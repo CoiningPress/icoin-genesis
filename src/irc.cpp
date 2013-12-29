@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
-// Copyright (c) 2013 BillionCoin Developers
+// Copyright (c) 2013 iCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -295,14 +295,14 @@ void ThreadIRCSeed2(void* parg)
         }
         
         if (fTestNet) {
-            Send(hSocket, "JOIN #billioncoinTEST3\r");
-            Send(hSocket, "WHO #billioncoinTEST3\r");
+            Send(hSocket, "JOIN #iCoinTEST3\r");
+            Send(hSocket, "WHO #iCoinTEST3\r");
         } else {
-            // randomly join #billioncoin00-#billioncoin99
+            // randomly join #iCoin00-#iCoin99
             int channel_number = GetRandInt(100);
-            channel_number = 0; // BillionCoin: for now, just use one channel
-            Send(hSocket, strprintf("JOIN #billioncoin%02d\r", channel_number).c_str());
-            Send(hSocket, strprintf("WHO #billioncoin%02d\r", channel_number).c_str());
+            channel_number = 0; // iCoin: for now, just use one channel
+            Send(hSocket, strprintf("JOIN #iCoin%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("WHO #iCoin%02d\r", channel_number).c_str());
         }
 
         int64 nStart = GetTime();
